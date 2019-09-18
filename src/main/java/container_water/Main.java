@@ -3,7 +3,7 @@ package container_water;
 public class Main {
     public static void main(String[] args) {
         int[] heights = {1, 8, 6, 2, 5, 4, 8, 3, 7};
-        System.out.println(maxArea(heights));
+        System.out.println(maxArea2(heights));
     }
 
     public static int maxArea(int[] height) {
@@ -19,7 +19,7 @@ public class Main {
             return 0;
         }
         if (n == 2) {
-            if (height[0] < height[1]){
+            if (height[0] < height[1]) {
                 return height[0];
             } else {
                 return height[1];
@@ -43,6 +43,25 @@ public class Main {
                 if (currentArea > maxArea) {
                     maxArea = currentArea;
                 }
+            }
+        }
+        return maxArea;
+    }
+
+    public static int maxArea2(int[] height) {
+        if (height == null) return 0;
+        if (height.length == 1) return 0;
+        if (height.length == 2) return Math.min(height[0], height[1]);
+
+        int l = 0, r = height.length - 1;
+
+        int maxArea = 0;
+        while (l < r) {
+            maxArea = Math.max(maxArea, (r - l) * Math.min(height[l], height[r]));
+            if(height[l] < height[r]){
+                l++;
+            } else {
+                r--;
             }
         }
         return maxArea;
