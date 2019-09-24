@@ -1,4 +1,4 @@
-package array_greater;
+package array_greater_google;
 
 import java.util.Scanner;
 import java.util.stream.Stream;
