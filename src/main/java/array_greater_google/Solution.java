@@ -42,6 +42,10 @@ class Solution {
         }
     }
 
+    static void call(){
+
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Integer[] N = {5};
