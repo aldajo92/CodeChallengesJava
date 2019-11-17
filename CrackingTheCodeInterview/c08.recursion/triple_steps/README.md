@@ -3,3 +3,7 @@ A child is running up a staricase with n steps and can hop either 1 step, 2 step
 
 ## Source ##
 Cracking the Code Interview - Problem 8.1
+
+## Input ##
+first line -> the number of queries.
+next lines -> value used to calculate the steps.

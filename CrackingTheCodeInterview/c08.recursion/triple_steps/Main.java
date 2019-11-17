@@ -1,12 +1,27 @@
 import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        int n1 = 3;
-        System.out.println(countWaysB(n1));
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int q = Integer.parseInt(bf.readLine());
 
-        int n2 = 3;
-        System.out.println(countWaysC(n2));
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = 0; i < q; i++){
+            int value = Integer.parseInt(bf.readLine());
+            sb.append(countWaysB(value));
+            sb.append("\n");
+        }
+
+        System.out.print(sb);
+        // int n1 = 3;
+        // System.out.println(countWaysB(n1));
+
+        // int n2 = 3;
+        // System.out.println(countWaysC(n2));
     }
 
     public static int countWaysA(int n) {
