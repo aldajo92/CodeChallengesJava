@@ -7,3 +7,9 @@ Cracking the Code Interview - Problem 8.1
 ## Input ##
 first line -> the number of queries.
 next lines -> value used to calculate the steps.
+
+## How to run ##
+```bash
+~$ javac Main.java
+~$ cat input.txt | javac Main.java
+```
